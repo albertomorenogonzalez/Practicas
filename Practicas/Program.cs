@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace practica1
 {
-    internal class Practica1
+    internal class Program
     {
         static void Main(string[] args)
         {
