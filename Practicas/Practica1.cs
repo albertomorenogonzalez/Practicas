@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace hola_mundo
+namespace practica1
 {
-    internal class Program
+    internal class Practica1
     {
         static void Main(string[] args)
         {
