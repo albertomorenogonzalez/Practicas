@@ -58,27 +58,36 @@ namespace practica1
         static void Practica3()
         {
             const string REPETIR_BUCLE = "S";
+            const string PARAR_BUCLE = "N";
             string respuesta = string.Empty;
 
             Console.WriteLine("¿Queres entrar al bucle? (S/N)");
-            respuesta = Console.ReadLine().ToUpper();
+            respuesta = LeerRespuesta(respuesta, REPETIR_BUCLE, PARAR_BUCLE);
 
-            while (String.Equals(respuesta, REPETIR_BUCLE))
+            while (string.Equals(respuesta, REPETIR_BUCLE))
             {
-                Console.WriteLine("¿Quieres entrar al bucle? (S/N)");
-                respuesta = Console.ReadLine().ToUpper();
+               Console.WriteLine("¿Queres entrar al bucle? (S/N)");
+               respuesta = LeerRespuesta(respuesta, REPETIR_BUCLE, PARAR_BUCLE);
             }
 
             Console.WriteLine("Has salido del bucle");
         }
-        #endregion
 
-        //Leer Respuesta
-        #region
-        static string LeerRespuesta(string respuesta)
-        {
-            return 
-        }
+            //Leer Respuesta
+            #region
+            static string LeerRespuesta(string respuesta, string s, string n)
+            {
+                respuesta = Console.ReadLine().ToUpper();
+
+                while (!string.Equals(respuesta, s) && (!string.Equals(respuesta, n)))
+                {
+                    Console.WriteLine("Se debe introducir N o S");
+                    respuesta = Console.ReadLine().ToUpper();
+                }
+
+                return respuesta;
+            }
+            #endregion
         #endregion
 
         static void Main(string[] args)
