@@ -53,10 +53,39 @@ namespace practica1
         }
         #endregion
 
+        //Práctica 3
+        #region
+        static void Practica3()
+        {
+            const string REPETIR_BUCLE = "S";
+            string respuesta = string.Empty;
+
+            Console.WriteLine("¿Queres entrar al bucle? (S/N)");
+            respuesta = Console.ReadLine().ToUpper();
+
+            while (String.Equals(respuesta, REPETIR_BUCLE))
+            {
+                Console.WriteLine("¿Quieres entrar al bucle? (S/N)");
+                respuesta = Console.ReadLine().ToUpper();
+            }
+
+            Console.WriteLine("Has salido del bucle");
+        }
+        #endregion
+
+        //Leer Respuesta
+        #region
+        static string LeerRespuesta(string respuesta)
+        {
+            return 
+        }
+        #endregion
+
         static void Main(string[] args)
         {
             //Practica1();
-            Practica2();
+            //Practica2();
+            Practica3();
         }
     }
 
