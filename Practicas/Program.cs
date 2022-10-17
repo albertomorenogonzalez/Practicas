@@ -8,6 +8,12 @@ namespace practica1
 {
     internal class Program
     {
+        //Constantes
+        #region
+        const string REPETIR_BUCLE = "S";
+        const string PARAR_BUCLE = "N";
+        #endregion
+
         //Práctica 1
         #region
         static void Practica1()
@@ -57,8 +63,6 @@ namespace practica1
         #region
         static void Practica3()
         {
-            const string REPETIR_BUCLE = "S";
-            const string PARAR_BUCLE = "N";
             string respuesta = string.Empty;
 
             Console.WriteLine("¿Queres entrar al bucle? (S/N)");
@@ -87,14 +91,32 @@ namespace practica1
 
                 return respuesta;
             }
-            #endregion
+        #endregion
+        #endregion
+
+        //Práctica 4
+        #region
+        static void Practica4()
+        {
+            string respuesta = string.Empty;
+
+            do
+            {
+                Console.WriteLine("¿Quieres entrar al bucle (S/N)?");
+                respuesta = Console.ReadLine().ToUpper();
+            } while (String.Equals(respuesta, REPETIR_BUCLE));
+
+            Console.WriteLine("Has salido del bucle");
+        }
+        
         #endregion
 
         static void Main(string[] args)
         {
             //Practica1();
             //Practica2();
-            Practica3();
+            //Practica3();
+            Practica4();
         }
     }
 
